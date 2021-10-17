@@ -25,15 +25,63 @@ ul{
     margin: 0 auto;
 
 }
+* {
+    box-sizing: border-box;
+  }
+  
+  #mySkills-container {
+    /* border: orange dashed 1.5px; */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+    text-align: center;
+    
+  }
+  #mySkills-container > h1 {
+    /* border: green dashed 1.5px; */
+    width: 100%;
+    flex-basis: 100%;
+    text-align: center;
+  }
+  
+  .skill-item {
+    /* border: blue dashed 1.5px; */
+    position: relative;
+    width: 31%;
+    max-width: 600px;
+    min-height: 300px;
+    margin: 0% 1%;
+    padding: 2% 3%;
+  }
+  
+  .skill-item > img { 
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 .footer{
-    background-color: #9e10c9;
+    background-color: #1076c9;
     padding: center;
 }
 .footer-ul{
     display: inline-block;
-    vertical-align: top;
 
 }
 .footer-li{
     padding: center;
 }
+  /* responsive css properties done with media queries below */
+ @media only screen and (max-width: 600px) {
+    .skill-item {
+      flex-direction: column;
+      width: 75%;
+      grid-template-rows: 300px 300px 300px;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "Mockup1 Mockup2 Mockup3";
+    }
